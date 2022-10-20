@@ -16,4 +16,70 @@ body {
     font-size: 24px;
 }
 
+li {
+	list-style-type: none;
+}
 
+.zoom {
+
+	transition: transform .2s; /* Animation */
+
+  }
+  
+.zoom:hover {
+	transform: scale(1.01); 
+  }
+
+.none {
+	width: 300px;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.maket {
+	display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3, 300px);
+	border-radius: 5px;
+	grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.theme-button
+{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: inline-block;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+.title{
+    width: 25ch;
+    font-family: "Work Sans";    
+    font-size: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid orange;
+    animation: flashing-border 1s step-end infinite,
+        printed-text 3s 
+}
+
+@keyframes flashing-border{ 
+    0%{
+        border-color: orange;
+    } 
+    50%{
+        border-color: transparent;
+    }
+    100%{
+        border-color: orange;
+    }
+}
+
+@keyframes printed-text{ 
+    from{
+    width: 0;
+    }
+}

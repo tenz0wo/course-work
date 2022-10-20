@@ -1,0 +1,39 @@
+{% extends 'description/underbase.html' %}
+{% block title %}Подкатегория BE{% endblock %}
+
+{% block content %}
+{% for item in info %}
+{% if item.id == "4" %}
+<div class="container px-4 py-5" id="custom-cards">
+  <h2 class="pb-2 border-bottom animate__animated animate__bounceIn wow">{{ item.title }}</h2>
+</div>
+<div class="container">
+<div data-wow-delay="0.15s" class="row row-cols-1 row-cols-md-3 mb-3 text-center animate__animated animate__fadeIn wow">
+  <div class="col">
+    <div class="card mb-4 rounded-3 shadow-sm">
+      <div class="card-header py-3" style="background-color: rgb(188, 228, 255);">
+        <h4 class="my-0 fw-normal" style="font-size: 24px;">{{ item.description_min }}</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title" style="font-size: 16px;">{{ item.price_min }}</h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Теоретический курс 18 часов</li><br>
+          <li>16 часов вождения</li><br>
+          <li>Практические занятия на автобусе + <br>двухосный прицеп (сб, вс)</li><br>
+          <li>Срок обучения 1.5 месяца</li><br>
+          <li>Подготовка документов</li><br>
+          <li>Экзамен в ГИБДД</li>
+        </ul>
+
+
+        <button type="button" class="w-100 btn btn-lg btn-outline-dark">Записаться</button>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div>
+
+    {% endif %}
+    {% endfor %}
+{% endblock %}
