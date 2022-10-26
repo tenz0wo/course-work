@@ -12,5 +12,7 @@ urlpatterns = [
     path('spec/', views.spec, name='spec'),
     path('car-C/', views.c, name='c'),
     path('car-C1/', views.c1, name='c1'),
+    path('', views.index, name='category'),
+
 
 ]

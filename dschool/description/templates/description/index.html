@@ -1,0 +1,46 @@
+{% extends 'description/underbase.html' %}
+{% block title %}Категории{% endblock %}
+
+{% block content %}
+<div>
+  <p id="enter"></p>
+</div>
+
+<div class="container px-4 py-5" id="custom-cards">
+  
+  <!-- <h1 class="title">Автошкола - ебашу в кашу</h1><br> -->
+   <h2 class="pb-2 border-bottom animate__animated animate__bounceIn wow">По дороге</h2>
+
+     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      
+       {% for par in cards %}
+       <div data-wow-delay="0.1s" class="col zoom animate__animated animate__fadeInUp wow">
+        <a href="{{ par.pagelink }}" style="text-decoration: none;">
+         <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+          <img src="{{ par.imglink }}" alt="" style="height: 230px;">
+           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h2 class="pt-6 mt-5 mb-4 display-6 lh-1 fw-light">{{ par.title }}</h2>
+          </div>
+         </div>
+        </a>
+       </div>
+       {% endfor %}
+      </div>
+
+      <h2 class="pb-2 border-bottom animate__animated animate__bounceIn wow">Ардреналиновые часы</h2>
+     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+
+      {% for item in extreme %}
+      <div data-wow-delay="0.1s" class="col zoom animate__animated animate__fadeInUp wow">
+       <a href="{{ item.pagelink }}" style="text-decoration: none;">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
+         <img src="{{ item.imglink }}" alt="" style="height: 230px;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+           <h2 class="pt-6 mt-5 mb-4 display-6 lh-1 fw-light">{{ item.title }}</h2>
+         </div>
+        </div>
+       </a>
+      </div>
+      {% endfor %}
+     </div>
+{% endblock %}

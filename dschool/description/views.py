@@ -1,7 +1,14 @@
 from django.shortcuts import render
 from requests import request
 from .models import Info
+from school.models import Cards, Extreme
 
+def index(request):
+    cards = Cards.objects.all()
+    extreme = Extreme.objects.all()
+    context = {"cards": cards, 
+               "extreme": extreme}
+    return render (request, 'description/index.html', context)
 
 def car(request):
     info = Info.objects.all()
