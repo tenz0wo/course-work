@@ -1,0 +1,34 @@
+{% extends 'school/base.html' %}
+{% block title %}FAQs{% endblock %}
+
+{% block content %}
+<div class="container px-4 py-5">
+    <h1 class="pb-2 border-bottom animate__animated animate__bounceIn wow">Частые вопросы</h1>
+    </div>
+    <section class="faq-container">
+            <!-- faq question -->
+            <h1 class="faq-page animate__animated animate__bounceIn">Как оплачивать обучение?</h1>
+            <!-- faq answer -->
+            <div class="faq-body animate__animated animate__fadeIn">
+                <p>Обучение на категорию "В" оплачивается поэтапно:</p><br>
+            <ul>
+                <li><p>1. При записи в главном офисе Вы оплачиваете только ТЕОРИЮ.</p></li><br>
+                <li><p>2. Стоимость практического курса Вы оплачиваете инструктору НА ПЕРВОМ ЗАНЯТИИ ПО ВОЖДЕНИЮ (занятия по вождению начинаются, как правило, уже со второй недели обучения) . Вы можете оплатить либо сразу полную стоимость программы вождения , либо сделать это в два этапа :на первом занятии - первую часть и на 10-ом занятии - вторую часть.</p></li><br>
+                <li><p>3. При записи на другие категории оплата производится единовременно при подписании договора.</p></li>
+            </ul> 
+            </div>
+        </div>      
+        {% for item in faqs %}
+        <hr class="hr-line">
+            <div>
+            <!-- faq question -->
+            <h1 class="faq-page animate__animated animate__bounceIn">{{ item.question }}</h1>
+            <!-- faq answer -->
+            <div class="faq-body animate__animated animate__fadeIn">
+                <p>{{ item.answer }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+
+{% endblock %}

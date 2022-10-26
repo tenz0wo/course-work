@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 14px;
+  }
+
+.course_block .container {
+    z-index: 2;
+}
+.container {
+    margin: auto;
+    position: relative;
+    max-width: auto;
+}
+div {
+    font-size: 14px;
+    color: #293e48;
+}
+
+
