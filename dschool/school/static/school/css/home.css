@@ -30,15 +30,13 @@ div {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
+
 }
 
-.title{
-  font-size: 32px;
-}
-
-.parallax1 {
+.parallax2 {
   /* The image used */
-  background-image: url("");
+  background-image: url("https://krot.info/uploads/posts/2021-10/1634719628_21-krot-mobi-p-dom-v-vide-mashini-mashini-krasivo-foto-23.jpg");
 
   /* Set a specific height */
   height: 100%; 

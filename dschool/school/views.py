@@ -5,7 +5,11 @@ from .models import FAQS, Cards, Extreme
 def index(request):
     cards = Cards.objects.all()
     extreme = Extreme.objects.all()
-    return render (request, 'school/index.html', {"cards": cards, "extreme": extreme})
+    context = {
+        "cards": cards, 
+        "extreme": extreme,
+        }
+    return render (request, 'school/index.html', context)
 
 def charter(request):
     return render (request, 'school/charter.html')
