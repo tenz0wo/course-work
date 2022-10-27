@@ -18,4 +18,38 @@ div {
     color: #293e48;
 }
 
+.parallax {
+  /* The image used */
+  background-image: url("https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/pnr/2021/Products/911-five-modes-in-one-day/sport-mode/MFR09717-north-pennine-moors--sport.jpeg/jcr:content/MFR09717-north%20pennine%20moors%20-sport.jpeg");
 
+  /* Set a specific height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title{
+  font-size: 32px;
+}
+
+.parallax1 {
+  /* The image used */
+  background-image: url("");
+
+  /* Set a specific height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title{
+  font-size: 32px;
+}

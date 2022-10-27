@@ -55,31 +55,24 @@ li {
     cursor: pointer;
 }
 
-.title{
-    width: 25ch;
-    font-family: "Work Sans";    
-    font-size: 50px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 4px solid orange;
-    animation: flashing-border 1s step-end infinite,
-        printed-text 3s 
+.content{
+    margin: 0 auto;
+    max-width: 1440px!important;
+    text-align: center;
+    padding: 2rem;
+    width: 100%!important;
+    z-index: 1;
 }
 
-@keyframes flashing-border{ 
-    0%{
-        border-color: orange;
-    } 
-    50%{
-        border-color: transparent;
-    }
-    100%{
-        border-color: orange;
-    }
+.containerr{
+    margin-top: 40%;
+    color: #fff;
+    position: relative;
+    max-width: 1440px;
 }
 
-@keyframes printed-text{ 
-    from{
-    width: 0;
-    }
+
+
+.maintext{
+    font-size: 42px;
 }
