@@ -40,3 +40,15 @@ class Extreme(models.Model):
         verbose_name = 'Экстрим'
         verbose_name_plural = 'Экстримальное вождение'
 
+class Contact(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    email = models.EmailField(max_length=200)
+    message = models.TextField(max_length=1000)
+
+    def __str__(self):
+        return self.email
+
+    class Meta:
+        verbose_name = 'Контакт'
+        verbose_name_plural = 'Контакты'

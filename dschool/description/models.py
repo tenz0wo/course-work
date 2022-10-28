@@ -11,6 +11,7 @@ class Info(models.Model):
     description_mid = models.CharField('Описание средней', max_length=300, null=True)
     description_high = models.CharField('Описание максимальной', max_length=300, null=True)
 
+
     def __str__(self):
         return self.title
 
