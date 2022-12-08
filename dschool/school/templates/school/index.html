@@ -5,7 +5,7 @@
 <div class="px-1">
 <div class="parallax">
   <div class="container px-4 py-5">
-    <div style="width: auto;height:800px;background-color:rgba(245, 245, 245, 0);font-size:24px">
+    <div style="width: auto;height:600px;font-size:24px">
       <div class="containerr content">
         <h2 class="maintext">Не просто автошкола!<br>10 лет опыта. Машина для того, чтобы на ней ездить.</h2>
       </div>
@@ -19,7 +19,8 @@
     
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
     {% for par in cards %}
-      {% if par.id == "1" %}   
+      {% for a in array %}
+      {% if par.id == a %}   
     <div data-wow-delay="0.1s" class="col zoom animate__animated animate__fadeInUp wow">
       <a href="{{ par.pagelink }}" style="text-decoration: none;">
        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
@@ -31,19 +32,9 @@
       </a>
      </div>
      {% endif %}
-     {% if par.id == "2" %}  
-     <div data-wow-delay="0.1s" class="col zoom animate__animated animate__fadeInUp wow">
-      <a href="{{ par.pagelink }}" style="text-decoration: none;">
-       <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
-        <img src="{{ par.imglink }}" alt="" style="height: 230px;">
-         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-          <h2 class="pt-6 mt-5 mb-4 display-6 lh-1 fw-light">{{ par.title }}</h2>
-        </div>
-       </div>
-      </a>
-     </div>
-     {% endif %}
      {% endfor %}
+     {% endfor %}
+
 
      {% for e in extreme %}
      {% if e.id == "1" %}   
@@ -64,7 +55,7 @@
 </div>
 <div class="parallax2">
   <div class="container px-4 py-5">
-    <div style="width:auto;height:800px;background-color:rgba(245, 245, 245, 0);font-size:24px">
+    <div style="width:auto;height:600px;font-size:24px">
       <div class="containerr content">
         <h2 class="maintext">Легкое обучение, возможность учиться дома!<br>С нас только покатушки и запись в ГИБДД.</h2>
       </div>

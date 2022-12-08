@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from requests import request
 from .models import Info
 from school.models import Cards, Extreme
 
