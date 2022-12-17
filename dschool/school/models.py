@@ -52,3 +52,47 @@ class Contact(models.Model):
     class Meta:
         verbose_name = 'Контакт'
         verbose_name_plural = 'Контакты'
+
+
+CATEGORY_CHOICES = [
+    ('Категория B', 'Категория B'),
+    ('Категория A', 'Категория A'),
+    ('Категория BE', 'Категория BE'),
+    ('Категория A1', 'Категория A1'),
+    ('Категория C', 'Категория C'),
+    ('Подкатегория C1', 'Подкатегория C1'),
+    ('Экстремальное вождение', 'Экстремальное вождение'),
+    ('Ралли', 'Ралли'),
+    ('Дрифт', 'Дрифт'),
+    ('Специализированные программы', 'Специализированные программы'),
+    
+]   
+
+GROUP_CHOICES = {
+    ('Группа 1', 'Начало обучения 07.01.2023'),
+    ('Группа 2', 'Начало обучения 15.04.2023'),
+    ('Группа 3', 'Начало обучения 30.06.2023'),
+}
+
+ADDRESS_CHOICES = {
+    ('Москва', 'Большая Тульская ул., 2, 8 офис; 2 этаж, Москва, 115191'),
+    ('Москва', 'улица Казакова д6 стр1, Москва, 105064'),
+    ('Москва', 'Петровка ул., 15с1, Москва, 107031'),
+}
+
+class Ticket(models.Model):
+    first_name = models.CharField('Имя', max_length=100, null=False) 
+    last_name = models.CharField('Фамилия', max_length=100, null=False) 
+    mail = models.CharField('Почта', max_length=150, null=False)
+    address = models.CharField('Адрес', max_length=200, null=False) 
+    address_autoschool = models.CharField('Адрес автошколы', max_length=200, null=False, choices=ADDRESS_CHOICES)     
+    category = models.CharField("Категория", max_length=100, null=False, choices=CATEGORY_CHOICES) 
+    group = models.CharField("Группа", max_length=100, null=False, choices=GROUP_CHOICES) 
+
+
+    def __str__(self):
+        return self.first_name
+
+    class Meta:
+        verbose_name = 'Тикет'
+        verbose_name_plural = 'Форма' 

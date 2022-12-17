@@ -1,0 +1,53 @@
+{% extends 'school/base.html' %}
+{% block title %}Заявка{% endblock %}
+
+{% block content %}
+<!-- {% for t in ticket %}
+{% if t.id == id %}
+<div class="container px-4 py-5" id="icon-grid">
+    <h2 class="pb-2 border-bottom animate__animated animate__bounceIn wow">Заявка</h2>
+        <div class="container px-4 py-5">     
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static" >
+                        <strong class="d-inline-block mb-2 text-success">Ваша заявка на рассмотрении</strong>
+                        <h3 class="mb-0">Звонки принимаются</h3>
+                        <div class="mb-1 text-muted">9:00 - 19:00</div>
+                        <h3 class="mb-0">Номер телефона</h3>
+                        <div class="mb-1 text-muted"  >+7 (123) 456-78-90</div>
+                        <h3 class="mb-0">Номер заявки:</h3>
+                        <p class="card-text mb-auto"> {{ i.id }}</p>
+                        <h3 class="mb-0">Имя Фамилия</h3>
+                        <div class="mb-1 text-muted">autoschool228@rambler.ru</div>
+                        <h3 class="mb-0">Группа</h3>
+                        <div class="mb-1 text-muted">@autoschool228</div>
+                        <h3 class="mb-0">Автошкола</h3>
+                        <div class="mb-1 text-muted">@autoschool228</div>
+                        {% endif %}
+                        
+                        {% for i in info %}
+                        {% if t.category == i.title %}
+                        <h3 class="mb-0">Стоимость обучения</h3>
+                        <div class="mb-1 text-muted">{{ i.price_min }}</div>
+                        {% endif %}
+
+                        {% endfor %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<section class="u-align-center u-clearfix u-image u-section-2" id="carousel_593d" data-image-width="1600" data-image-height="1067">
+    <div class="u-align-left u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div class="u-border-10 u-border-white u-container-style u-expanded-width-xs u-group u-shape-rectangle u-group-1">
+        <div class="u-container-layout u-valign-top-xs u-container-layout-1">
+          <h1 class="u-custom-font u-font-raleway u-text u-text-body-alt-color u-text-1"><br> спасибо.
+          </h1>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

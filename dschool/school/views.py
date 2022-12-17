@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from .models import FAQS, Cards, Extreme
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .models import FAQS, Cards, Extreme, Ticket
+from description.models import Info
+from .forms import (TicketForm)
 
 
 def index(request):  # функция инициализации html файла в качестве страницы
@@ -21,9 +24,30 @@ def faq(request):
     return render (request, 'school/faqs.html', {"faqs": faqs})
 
 def contacts(request):
-    return render (request, 'school/contacts.html')
+    if request.method == "POST":
+        form = TicketForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Создана заявка!')
+        
+    form = TicketForm()
+
+    context = {
+        "form": form, 
+        }  
+    return render (request, 'school/contacts.html', context)
     
 def prez(request):
     return render (request, 'school/prez.html')
+
+def result(request):
+    info = Info.objects.all()
+    ticket = Ticket.objects.all()
+
+    context =  {
+        "info": info,
+        "ticket": ticket
+    }
+    return render (request, 'school/result.html', context)
   
 
